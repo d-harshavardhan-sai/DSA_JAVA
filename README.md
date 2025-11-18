@@ -92,6 +92,7 @@ This section curates classic subarray challenges, focusing on efficient sum calc
 | 8 | Subarray with 0 Sum | [Practice](https://www.geeksforgeeks.org/problems/subarray-with-0-sum-1587115621/1) | HashSet, Prefix Sum | <details><summary>Show Formula</summary>If curr_sum == 0 or curr_sum in set:<br>return True<br>curr_sum += arr[i]</details> |
 | 9 | Longest Subarray with Sum Divisible by K | [Practice](https://www.geeksforgeeks.org/problems/longest-subarray-with-sum-divisible-by-k1259/1) | Prefix Sum, HashMap, Modulo | <details><summary>Show Formula</summary>Use prefix sums and mod k:<br>if (curr_sum % k) seen before at index j:<br>ans = max(ans, i-j)</details> |
 | 10 | Sub-array Sum Divisible by K | [Practice](https://www.geeksforgeeks.org/problems/sub-array-sum-divisible-by-k2617/1) | Prefix Sum, Counting, Modulo | <details><summary>Show Formula</summary>Count pairs of prefix sums with same mod k value:</details> |
+| 11 | Count Subarrays with given XOR | [Practice](https://www.geeksforgeeks.org/problems/count-subarray-with-given-xor/1) | Prefix Sum, Counting, xor | <details><summary>Show Formula</summary>Count pairs of prefix xors:</details> |
 
 
 
