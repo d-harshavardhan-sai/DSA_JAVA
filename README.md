@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # 🌟 Dynamic Programming Easy Practice Sheet
@@ -8,7 +7,7 @@
 <div align="center">
 
 🔗 Your first step towards mastering DP in interviews!  
-Level up with the most effective starter problems.    
+Level up with the most effective starter problems.
 
 </div>
 
@@ -74,3 +73,30 @@ Made for ambitious DSA learners 🚀
 Happy problem solving! 🧑‍💻✨
 
 </div>
+
+---
+
+## 🔥 Subarray Problems (Prefix Sum & HashMap)
+
+This section curates classic subarray challenges, focusing on efficient sum calculations using prefix sums and hashmap-based techniques.
+
+| # | Title | 🔗 Link | 💡 Tags | Formula |
+|:-:|:---------------------|:----:|:----------------------|:--------|
+| 1 | Longest Subarray with Sum K | [Practice](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1) | Prefix Sum, HashMap | <details><summary>Show Formula</summary>If curr_sum-k exists in map:<br>ans = max(ans, i - map[curr_sum-k])<br>curr_sum += arr[i]</details> |
+| 2 | Largest Subarray with 0 Sum | [Practice](https://www.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1) | Prefix Sum, HashMap, Zero Sum | <details><summary>Show Formula</summary>If curr_sum = 0 or curr_sum exists in map:<br>ans = max(ans, i - map[curr_sum])<br>curr_sum += arr[i]</details> |
+| 3 | Subarrays with Sum K | [Practice](https://www.geeksforgeeks.org/problems/subarrays-with-sum-k/1) | Prefix Sum, HashMap, Counting | <details><summary>Show Formula</summary>If curr_sum-k exists in map:<br>count += map[curr_sum-k]<br>curr_sum += arr[i]</details> |
+| 4 | Zero Sum Subarrays | [Practice](https://www.geeksforgeeks.org/problems/zero-sum-subarrays1825/1) | HashMap, Prefix Sum | <details><summary>Show Formula</summary>If curr_sum exists in map:<br>count += map[curr_sum]<br>map[curr_sum]++<br>curr_sum += arr[i]</details> |
+| 5 | Subarray with 0 Sum | [Practice](https://www.geeksforgeeks.org/problems/subarray-with-0-sum-1587115621/1) | HashSet, Prefix Sum | <details><summary>Show Formula</summary>If curr_sum == 0 or curr_sum in set:<br>return True<br>curr_sum += arr[i]</details> |
+
+---
+
+### 🌈 Prefix Sum & HashMap Quick Concepts
+
+- **Prefix Sum:** Running cumulative sum used to quickly compute range sums.
+- **HashMap/HashSet:** Used for fast existence and counting checks of cumulative sums.
+
+> ⚡ **Expand "Show Formula" for implementation hints!**
+
+---
+
+Feel free to add more problems or topics as you expand your practice sheet. The format is scalable and remains visually appealing for new learners and experienced coders alike
