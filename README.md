@@ -82,11 +82,18 @@ This section curates classic subarray challenges, focusing on efficient sum calc
 
 | # | Title | 🔗 Link | 💡 Tags | Formula |
 |:-:|:---------------------|:----:|:----------------------|:--------|
-| 1 | Longest Subarray with Sum K | [Practice](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1) | Prefix Sum, HashMap | <details><summary>Show Formula</summary>If curr_sum-k exists in map:<br>ans = max(ans, i - map[curr_sum-k])<br>curr_sum += arr[i]</details> |
-| 2 | Largest Subarray with 0 Sum | [Practice](https://www.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1) | Prefix Sum, HashMap, Zero Sum | <details><summary>Show Formula</summary>If curr_sum = 0 or curr_sum exists in map:<br>ans = max(ans, i - map[curr_sum])<br>curr_sum += arr[i]</details> |
-| 3 | Subarrays with Sum K | [Practice](https://www.geeksforgeeks.org/problems/subarrays-with-sum-k/1) | Prefix Sum, HashMap, Counting | <details><summary>Show Formula</summary>If curr_sum-k exists in map:<br>count += map[curr_sum-k]<br>curr_sum += arr[i]</details> |
-| 4 | Zero Sum Subarrays | [Practice](https://www.geeksforgeeks.org/problems/zero-sum-subarrays1825/1) | HashMap, Prefix Sum | <details><summary>Show Formula</summary>If curr_sum exists in map:<br>count += map[curr_sum]<br>map[curr_sum]++<br>curr_sum += arr[i]</details> |
-| 5 | Subarray with 0 Sum | [Practice](https://www.geeksforgeeks.org/problems/subarray-with-0-sum-1587115621/1) | HashSet, Prefix Sum | <details><summary>Show Formula</summary>If curr_sum == 0 or curr_sum in set:<br>return True<br>curr_sum += arr[i]</details> |
+| 1 | Subarray with Given Sum | [Practice](https://www.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1) | Sliding Window, Prefix Sum | <details><summary>Show Formula</summary>Use sliding window or prefix sums to find subarray with sum = target.</details> |
+| 2 | Longest Subarray with Sum K | [Practice](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1) | Prefix Sum, HashMap | <details><summary>Show Formula</summary>If curr_sum-k exists in map:<br>ans = max(ans, i - map[curr_sum-k])<br>curr_sum += arr[i]</details> |
+| 3 | Largest Subarray with 0 Sum | [Practice](https://www.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1) | Prefix Sum, HashMap, Zero Sum | <details><summary>Show Formula</summary>If curr_sum = 0 or curr_sum exists in map:<br>ans = max(ans, i - map[curr_sum])<br>curr_sum += arr[i]</details> |
+| 4 | Largest Subarray of 0s and 1s | [Practice](https://www.geeksforgeeks.org/problems/largest-subarray-of-0s-and-1s/1) | Prefix Sum, HashMap, Binary Array | <details><summary>Show Formula</summary>Convert 0 to -1, then find largest subarray with sum 0 using prefix sums.</details> |
+| 5 | Count Subarrays with Equal 1s and 0s | [Practice](https://www.geeksforgeeks.org/problems/count-subarrays-with-equal-number-of-1s-and-0s-1587115620/1) | Prefix Sum, HashMap, Counting | <details><summary>Show Formula</summary>Convert 0 to -1, count prefix sums, count pairs with same sum.</details> |
+| 6 | Subarrays with Sum K | [Practice](https://www.geeksforgeeks.org/problems/subarrays-with-sum-k/1) | Prefix Sum, HashMap, Counting | <details><summary>Show Formula</summary>If curr_sum-k exists in map:<br>count += map[curr_sum-k]<br>curr_sum += arr[i]</details> |
+| 7 | Zero Sum Subarrays | [Practice](https://www.geeksforgeeks.org/problems/zero-sum-subarrays1825/1) | HashMap, Prefix Sum | <details><summary>Show Formula</summary>If curr_sum exists in map:<br>count += map[curr_sum]<br>map[curr_sum]++<br>curr_sum += arr[i]</details> |
+| 8 | Subarray with 0 Sum | [Practice](https://www.geeksforgeeks.org/problems/subarray-with-0-sum-1587115621/1) | HashSet, Prefix Sum | <details><summary>Show Formula</summary>If curr_sum == 0 or curr_sum in set:<br>return True<br>curr_sum += arr[i]</details> |
+| 9 | Longest Subarray with Sum Divisible by K | [Practice](https://www.geeksforgeeks.org/problems/longest-subarray-with-sum-divisible-by-k1259/1) | Prefix Sum, HashMap, Modulo | <details><summary>Show Formula</summary>Use prefix sums and mod k:<br>if (curr_sum % k) seen before at index j:<br>ans = max(ans, i-j)</details> |
+| 10 | Sub-array Sum Divisible by K | [Practice](https://www.geeksforgeeks.org/problems/sub-array-sum-divisible-by-k2617/1) | Prefix Sum, Counting, Modulo | <details><summary>Show Formula</summary>Count pairs of prefix sums with same mod k value:</details> |
+
+
 
 ---
 
