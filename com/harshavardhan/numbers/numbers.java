@@ -48,7 +48,7 @@ public class numbers {
 				if(i*(i+1)==n) fact=i;
 			}
 		}
-		if(fact!=0) System.out.println("pronic number");
+		if(fact!=0) System.out.println("pronic number"+fact);
 		else System.out.println("not pronic number");
 	}
 
