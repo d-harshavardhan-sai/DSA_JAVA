@@ -108,3 +108,75 @@ This section curates classic subarray challenges, focusing on efficient sum calc
 ---
 
 Feel free to add more problems or topics as you expand your practice sheet. The format is scalable and remains visually appealing for new learners and experienced coders alike
+
+
+## 🔥 Sliding Window Problems
+
+This section curates classic **Sliding Window** challenges, focusing on efficient solutions using **fixed-size** and **variable-size** window techniques.
+
+| # | Title | 🔗 Link | 💡 Tags | Formula |
+|:-:|:---------------------|:----:|:----------------------|:--------|
+| 1 | Maximum Sum Subarray of Size K | [Practice](https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1) | Fixed Window, Sliding Window | <details><summary>Show Formula</summary>Add `arr[r]` to `curSum`. When window size = `k`: `maxSum = max(maxSum, curSum)`, then remove `arr[l]` and move `l++`.</details> |
+| 2 | Count the Number of Subarrays | [Practice](https://www.geeksforgeeks.org/problems/count-the-number-of-subarrays/1) | Variable Window, Sliding Window, Two Pointers | <details><summary>Show Formula</summary>For positive elements, maintain `sum <= k`. When `sum > k`, shrink from left. Number of valid subarrays ending at `r` = `r - l + 1`.</details> |
+| 3 | Longest Subarray with Sum at Most K | [Practice](https://www.geeksforgeeks.org/) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Maintain `sum <= k`. While `sum > k`, remove elements from the left. `maxLen = max(maxLen, r-l+1)`.</details> |
+| 4 | Smallest Subarray with Sum Greater Than X | [Practice](https://www.geeksforgeeks.org/problems/smallest-subarray-with-sum-greater-than-x5651/1) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Add elements until `sum > x`. Then shrink from left while possible and update minimum length.</details> |
+| 5 | Longest Subarray with At Most K Distinct Elements | [Practice](https://www.geeksforgeeks.org/) | Variable Window, HashMap, Two Pointers | <details><summary>Show Formula</summary>Maintain frequency of elements in the window. While distinct elements `> k`, shrink from left. `maxLen = max(maxLen, r-l+1)`.</details> |
+| 6 | Longest Substring Without Repeating Characters | [Practice](https://www.geeksforgeeks.org/problems/longest-distinct-characters-in-string5848/1) | Variable Window, HashSet, Two Pointers | <details><summary>Show Formula</summary>Expand right. If duplicate appears, move `l` until the window contains unique characters. `maxLen = max(maxLen, r-l+1)`.</details> |
+| 7 | Maximum Number of Consecutive 1s | [Practice](https://www.geeksforgeeks.org/) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Maintain a window satisfying the allowed number of zeroes. If zero count exceeds the limit, shrink from left.</details> |
+| 8 | Maximum Consecutive Ones III | [Practice](https://leetcode.com/problems/max-consecutive-ones-iii/) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Maintain `zeroCount <= k`. When `zeroCount > k`, shrink from left. `maxLen = max(maxLen, r-l+1)`.</details> |
+| 9 | Fruit Into Baskets | [Practice](https://leetcode.com/problems/fruit-into-baskets/) | Variable Window, HashMap, Two Pointers | <details><summary>Show Formula</summary>Maintain at most 2 distinct elements. If distinct count `> 2`, shrink from left. `maxLen = max(maxLen, r-l+1)`.</details> |
+| 10 | Minimum Size Subarray Sum | [Practice](https://leetcode.com/problems/minimum-size-subarray-sum/) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Expand until `sum >= target`, update minimum length, then shrink from left while `sum >= target`.</details> |
+| 11 | Longest Repeating Character Replacement | [Practice](https://leetcode.com/problems/longest-repeating-character-replacement/) | Variable Window, Frequency Array, Two Pointers | <details><summary>Show Formula</summary>Window is valid when `(windowSize - maxFrequency) <= k`. Otherwise shrink from left.</details> |
+| 12 | Permutation in String | [Practice](https://leetcode.com/problems/permutation-in-string/) | Fixed Window, Frequency Array, Sliding Window | <details><summary>Show Formula</summary>Maintain a window of size `pattern.length()`. Compare character frequencies of the current window with the pattern.</details> |
+| 13 | Find All Anagrams in a String | [Practice](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Fixed Window, Frequency Array, Sliding Window | <details><summary>Show Formula</summary>Use a window of size `pattern.length()`. Add right character, remove left character, and compare frequencies.</details> |
+| 14 | Maximum of All Subarrays of Size K | [Practice](https://www.geeksforgeeks.org/problems/maximum-of-subarrays-of-size-k3101/1) | Fixed Window, Deque, Sliding Window | <details><summary>Show Formula</summary>Maintain a decreasing deque of indices. Remove indices outside the window and smaller elements from the back.</details> |
+| 15 | First Negative Integer in Every Window of Size K | [Practice](https://www.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3347/1) | Fixed Window, Queue, Sliding Window | <details><summary>Show Formula</summary>Store indices of negative elements. For every window, remove expired indices and use the first remaining negative index.</details> |
+| 16 | Count Occurrences of Anagrams | [Practice](https://www.geeksforgeeks.org/) | Fixed Window, Frequency Map, Sliding Window | <details><summary>Show Formula</summary>Maintain a window of pattern length and compare/update character frequencies while sliding.</details> |
+| 17 | Longest Subarray After Deleting One Element | [Practice](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Maintain at most one `0` in the window. If zero count exceeds 1, shrink from left. Answer = `windowSize - 1`.</details> |
+| 18 | Binary Subarrays With Sum | [Practice](https://leetcode.com/problems/binary-subarrays-with-sum/) | Sliding Window, Prefix Sum | <details><summary>Show Formula</summary>For binary arrays: `count(sum = goal) = count(sum <= goal) - count(sum <= goal-1)`.</details> |
+| 19 | Subarrays with K Different Integers | [Practice](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Variable Window, HashMap, Sliding Window | <details><summary>Show Formula</summary>`exactly(K) = atMost(K) - atMost(K-1)`.</details> |
+| 20 | Subarray Product Less Than K | [Practice](https://leetcode.com/problems/subarray-product-less-than-k/) | Variable Window, Two Pointers, Sliding Window | <details><summary>Show Formula</summary>Maintain `product < k`. When `product >= k`, shrink from left. Number of valid subarrays ending at `r` = `r-l+1`.</details> |
+
+---
+
+### 🧠 Sliding Window Core Patterns
+
+| Pattern | Window Type | Key Condition | Answer |
+|:--|:--|:--|:--|
+| **Fixed Size** | `r-l+1 == k` | Window size exactly `k` | Max / Min / Count |
+| **At Most K** | Variable | Constraint `<= k` | `r-l+1` |
+| **At Least K** | Variable | Constraint `>= k` | Shrink + update |
+| **Exactly K** | Variable | Exact constraint | `atMost(K) - atMost(K-1)` |
+| **Maximum Length** | Variable | Keep window valid | `max(maxLen, r-l+1)` |
+| **Minimum Length** | Variable | Expand until valid | `min(minLen, r-l+1)` |
+| **Frequency Window** | Variable | Frequency constraint | HashMap / Array |
+| **Monotonic Deque** | Fixed / Variable | Maintain increasing/decreasing order | Max / Min |
+
+---
+
+### 🔥 Master Sliding Window Template
+
+#### 1️⃣ Fixed-Size Window
+
+```java
+int n = arr.length;
+int l = 0, r = 0;
+int curSum = 0;
+int ans = 0;
+
+while (r < n) {
+
+    curSum += arr[r];
+
+    if (r - l + 1 == k) {
+
+        ans = Math.max(ans, curSum);
+
+        curSum -= arr[l];
+        l++;
+    }
+
+    r++;
+}
+
+
