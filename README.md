@@ -118,7 +118,11 @@ This section curates classic **Sliding Window** challenges, focusing on efficien
 |:-:|:---------------------|:----:|:----------------------|:--------|
 | 1 | Maximum Sum Subarray of Size K | [Practice](https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1) | Fixed Window, Sliding Window | <details><summary>Show Formula</summary>Add `arr[r]` to `curSum`. When window size = `k`: `maxSum = max(maxSum, curSum)`, then remove `arr[l]` and move `l++`.</details> |
 | 2 | Count the Number of Subarrays | [Practice](https://www.geeksforgeeks.org/problems/count-the-number-of-subarrays/1) | Variable Window, Sliding Window, Two Pointers | <details><summary>Show Formula</summary>For positive elements, maintain `sum <= k`. When `sum > k`, shrink from left. Number of valid subarrays ending at `r` = `r - l + 1`.</details> |
-| 3 | Longest Subarray with Sum at Most K | [Practice](https://www.geeksforgeeks.org/) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Maintain `sum <= k`. While `sum > k`, remove elements from the left. `maxLen = max(maxLen, r-l+1)`.</details> |
+| 3 | Count Distinct Elements in Every Window | [Practice](https://www.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Maintain `sum <= k`. While `sum > k`, remove elements from the left. `maxLen = max(maxLen, r-l+1)`.</details> |
+| 4 | First Negative in Windows of Size K | [Practice](https://www.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Add elements until `sum > x`. Then shrink from left while possible and update minimum length.</details> |
+| 5 | K Sized Subarray Maximum | [Practice](https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Add elements until `sum > x`. Then shrink from left while possible and update minimum length.</details> |
+| 6 | Maximum MEX from all subarrays of length K | [Practice](https://www.geeksforgeeks.org/dsa/maximum-mex-from-all-subarrays-of-length-k/) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Add elements until `sum > x`. Then shrink from left while possible and update minimum length.</details> |
+| 4 | Smallest Subarray with Sum Greater Than X | [Practice](https://www.geeksforgeeks.org/problems/smallest-subarray-with-sum-greater-than-x5651/1) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Add elements until `sum > x`. Then shrink from left while possible and update minimum length.</details> |
 | 4 | Smallest Subarray with Sum Greater Than X | [Practice](https://www.geeksforgeeks.org/problems/smallest-subarray-with-sum-greater-than-x5651/1) | Variable Window, Two Pointers | <details><summary>Show Formula</summary>Add elements until `sum > x`. Then shrink from left while possible and update minimum length.</details> |
 | 5 | Longest Subarray with At Most K Distinct Elements | [Practice](https://www.geeksforgeeks.org/) | Variable Window, HashMap, Two Pointers | <details><summary>Show Formula</summary>Maintain frequency of elements in the window. While distinct elements `> k`, shrink from left. `maxLen = max(maxLen, r-l+1)`.</details> |
 | 6 | Longest Substring Without Repeating Characters | [Practice](https://www.geeksforgeeks.org/problems/longest-distinct-characters-in-string5848/1) | Variable Window, HashSet, Two Pointers | <details><summary>Show Formula</summary>Expand right. If duplicate appears, move `l` until the window contains unique characters. `maxLen = max(maxLen, r-l+1)`.</details> |
@@ -178,5 +182,32 @@ while (r < n) {
 
     r++;
 }
+```
+```
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    TreeSet<Integer> ts = new TreeSet<>();
+		int[] arr = {6, 1, 3, 2, 4};
+		int k=3;
+		int n = arr.length;
+		for(int ele:arr) ts.add(ele);
+		List<Integer> ans = new ArrayList<>();
+		for(int i=0; i<=n-k; i++){
+		    TreeSet<Integer> cts = new TreeSet<>();
+		    for(int j=i; j<i+k; j++){
+		        cts.add(arr[j]);
+		    }
+		    int mex = 1;
+		    while(cts.contains(mex)) mex++;
+		    ans.add(mex);
+		}
+		System.out.println(ans);
+		System.out.println(Collections.max(ans));
+	}
+}
+```
 
 
