@@ -426,12 +426,13 @@ for (int i = 0; i < v; i++) {
 |:-:|:--|:--|:--|
 | 1 | Number of Provinces | [LeetCode](https://leetcode.com/problems/number-of-provinces/) | Components, DFS/BFS |
 | 2 | Number of Islands | [LeetCode](https://leetcode.com/problems/number-of-islands/) | Grid DFS/BFS |
-| 3 | Flood Fill | [LeetCode](https://leetcode.com/problems/flood-fill/) | Grid DFS/BFS |
-| 4 | Rotting Oranges | [LeetCode](https://leetcode.com/problems/rotting-oranges/) | Multi-source BFS |
-| 5 | 01 Matrix | [LeetCode](https://leetcode.com/problems/01-matrix/) | Multi-source BFS |
-| 6 | Surrounded Regions | [LeetCode](https://leetcode.com/problems/surrounded-regions/) | Boundary DFS/BFS |
-| 7 | Number of Enclaves | [LeetCode](https://leetcode.com/problems/number-of-enclaves/) | Boundary DFS/BFS |
-| 8 | Number of Distinct Islands | [GFG](https://www.geeksforgeeks.org/problems/number-of-distinct-islands/1) | Shape Encoding |
+| 3 | Number of Islands 2| [GFG](https://www.geeksforgeeks.org/problems/find-the-number-of-islands/1) | Grid DFS/BFS |
+| 4 | Flood Fill | [LeetCode](https://leetcode.com/problems/flood-fill/) | Grid DFS/BFS |
+| 5 | Rotting Oranges | [LeetCode](https://leetcode.com/problems/rotting-oranges/) | Multi-source BFS |
+| 6 | 01 Matrix | [LeetCode](https://leetcode.com/problems/01-matrix/) | Multi-source BFS |
+| 7 | Surrounded Regions | [LeetCode](https://leetcode.com/problems/surrounded-regions/) | Boundary DFS/BFS |
+| 8 | Number of Enclaves | [LeetCode](https://leetcode.com/problems/number-of-enclaves/) | Boundary DFS/BFS |
+| 9 | Number of Distinct Islands | [GFG](https://www.geeksforgeeks.org/problems/number-of-distinct-islands/1) | Shape Encoding |
 
 ---
 
